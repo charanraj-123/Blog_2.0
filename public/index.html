@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlogSphere — Share Your Story</title>
+  <meta name="description" content="A clean, modern, and professional blog platform with comments inspired by the Astra theme.">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sticky Header & Navigation -->
+  <header id="site-header">
+    <div class="nav-container">
+      <a href="/" class="logo" id="logo-link">
+        <i class="fa-solid fa-feather-pointed"></i> Blog<span>Sphere</span>
+      </a>
+      <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="nav-menu">
+        <a href="/" class="nav-item active" id="nav-home">Home</a>
+        <a href="/blog" class="nav-item" id="nav-blog">Blog</a>
+        <a href="/about" class="nav-item" id="nav-about">About</a>
+        <div class="nav-user" id="nav-auth-section">
+          <!-- Auth buttons/user profile will be injected dynamically here -->
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Router view outlet -->
+  <main id="app-viewport">
+    <!-- View contents injected here dynamically -->
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3><i class="fa-solid fa-feather-pointed"></i> BlogSphere</h3>
+        <p>A modern full-stack blog platform offering clean typography, intuitive user experiences, and dynamic conversations. Share your story with the world today.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>Explore</h4>
+        <a href="/">Home</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About Us</a>
+      </div>
+      <div class="footer-nav">
+        <h4>Account</h4>
+        <a href="/login" class="auth-only-hide">Login</a>
+        <a href="/register" class="auth-only-hide">Register</a>
+        <a href="/create-post" class="auth-only-show" style="display:none;">Create Post</a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 BlogSphere. All rights reserved. Designed with precision.
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-root"></div>
+
+  <!-- Loading Spinner Overlay -->
+  <div class="spinner-overlay" id="spinner-root">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Confirmation Dialog Modal -->
+  <div class="dialog-overlay" id="dialog-root">
+    <div class="dialog">
+      <h3 class="dialog-title" id="dialog-title">Are you sure?</h3>
+      <p class="dialog-text" id="dialog-text">This action cannot be undone.</p>
+      <div class="dialog-actions">
+        <button class="btn btn-secondary" id="dialog-cancel-btn">Cancel</button>
+        <button class="btn btn-danger" id="dialog-confirm-btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Router + App logic scripts -->
+  <script src="/js/ui.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/posts.js"></script>
+  <script src="/js/comments.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
